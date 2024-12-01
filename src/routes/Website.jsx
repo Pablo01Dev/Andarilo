@@ -33,7 +33,7 @@ function Website() {
       <SecondHeader />
       <div className={styles.conteinerProjetos}>
         <div className={styles.projetos}>
-          <p>Identidade Visual</p>
+          <p>Websites</p>
           <div className={styles.cardProjetos}>
             {projects.map(project => (
               <CardProjetos
