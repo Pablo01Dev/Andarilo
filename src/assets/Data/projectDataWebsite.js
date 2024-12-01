@@ -20,8 +20,8 @@ export const projects = [
   {
     id: 3,
     title: 'Rabello Ammim',
-    fundo: 'https://raw.githubusercontent.com/Pablo01Dev/andarilo/main/src/assets/images/portfolio/projetos/MR/mr-2.jpg',
-    images: ['https://raw.githubusercontent.com/Pablo01Dev/andarilo/main/src/assets/images/portfolio/projetos/Nali/nali-1.jpg'],
+    fundo: 'https://raw.githubusercontent.com/Pablo01Dev/andarilo/main/src/assets/images/rabello-amim.jpg',
+    images: ['https://raw.githubusercontent.com/Pablo01Dev/andarilo/main/src/assets/images/rabello-amim-projeto.jpg'],
     link: 'https://ceirabelloamim.com.br',
     description: '',
   },
