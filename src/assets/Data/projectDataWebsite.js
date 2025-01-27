@@ -20,7 +20,7 @@ export const projects = [
   {
     id: 3,
     title: 'Selimp',
-    fundo: 'https://raw.githubusercontent.com/Pablo01Dev/andarilo/main/src/assets/images/portfolio/projetos/Selimp/selimp-capa.jpg',
+    fundo: 'https://raw.githubusercontent.com/Pablo01Dev/andarilo/main/src/assets/images/portfolio/projetos/Selimp/selimp-capa.png',
     images: ['https://raw.githubusercontent.com/Pablo01Dev/andarilo/main/src/assets/images/portfolio/projetos/Selimp/selimp-projeto.jpg'],
     link: 'https://selimp.com.br',
     description: '',
