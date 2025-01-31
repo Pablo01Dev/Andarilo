@@ -1,0 +1,80 @@
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .banner-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* Inicialmente escondido */
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .banner-slide.active {
+    opacity: 1; /* Slide ativo fica visível */
+  }
+  
+  .banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }
+  
+  .banner-content h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .banner-content p {
+    font-size: 1.2em;
+  }
+  
+  /* Estilos para os pontos de navegação (opcional) */
+  .banner-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .banner-nav-dot {
+    width: 12px; /* Aumentei o tamanho para visibilidade */
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .banner-nav-dot.active {
+    background-color: white;
+  }
+  
+  /* Media query para telas maiores */
+  @media (min-width: 768px) {
+    .banner-container {
+      height: 500px; /* Aumentei a altura do banner em telas grandes */
+    }
+  
+    .banner-content h2 {
+      font-size: 2.5em;
+    }
+  
+    .banner-content p {
+      font-size: 1.5em;
+    }
+  }
+      

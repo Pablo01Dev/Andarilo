@@ -5,11 +5,13 @@ import Header from '../models/Header';
 import Footer from '../models/Footer';
 import Contact from '../models/Contact';
 import QuemSomos from '../models/QuemSomos';
+import Banner from '../models/Banner'
 
 function Home() {
   return (
     <div>
       <Header />
+      <Banner />
       <Element name="portfolio" className="element">
         <Cards />
       </Element>
