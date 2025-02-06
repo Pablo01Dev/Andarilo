@@ -5,11 +5,10 @@
   width: 70%; 
   margin: 0 auto; 
   background-color: rgb(255, 204, 0); /* Fundo amarelo */
-
-  min-height: 500px; /* Defina uma altura mínima */
+  min-height: 500px; 
   border-radius: 10px;
-  position: relative; /* Para permitir que a sobreposição fique no topo */
-  overflow: hidden; /* Evita que a imagem ultrapasse as bordas arredondadas */
+  position: relative;
+  overflow: hidden;
 }
 
 .bannerOverlay {
@@ -35,7 +34,6 @@
   }
 }
 
-
 .bannerOverlay img {
   width: 40%;
   height: auto;
@@ -44,11 +42,8 @@
   right: 16px;
   transform: rotate(-30deg);
   animation: float 3s ease-in-out infinite;
-  transform-origin: center; /* Define o centro da imagem como ponto de rotação */
+  transform-origin: center;
 }
-
-
-
 
 .corpo {
   margin: 0em auto;
@@ -61,6 +56,34 @@
   border-radius: 10px;
   color: #000000;
   font-weight: var(--texto);
-  position: relative; /* Mantém o texto acima da sobreposição */
+  position: relative;
   z-index: 2;
+}
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 768px) {
+  .bannerContainer {
+    width: 90%; /* Aumenta a largura para se ajustar melhor a telas pequenas */
+    margin: 0 auto;
+    min-height: 400px; /* Ajuste a altura para se adequar ao layout */
+  }
+
+  .bannerOverlay img {
+    width: 60%; /* Aumenta o tamanho da imagem no mobile */
+    bottom: 15px; /* Ajusta a posição vertical */
+    right: 10px; /* Ajusta a posição horizontal */
+  }
+
+  .corpo {
+    margin: 4em auto; /* Ajusta a margem para ficar mais equilibrado em telas pequenas */
+    text-align: center; /* Centraliza o texto no mobile */
+  }
+
+  .corpo h1 {
+    font-size: 24px; /* Ajusta o tamanho da fonte */
+  }
+
+  .corpo h2 {
+    font-size: 18px; /* Ajusta o tamanho da fonte */
+  }
 }
