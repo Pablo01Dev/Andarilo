@@ -24,15 +24,22 @@
 
 @keyframes float {
   0% {
-    transform: translateY(0) translateX(0) rotate(-30deg);
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-8px) translateX(5px);
   }
   50% {
-    transform: translateY(-10px) translateX(-10px) rotate(-25deg);
+    transform: translateY(5px) translateX(-5px);
+  }
+  75% {
+    transform: translateY(-5px) translateX(8px);
   }
   100% {
-    transform: translateY(0) translateX(0) rotate(-30deg);
+    transform: translateY(0) translateX(0);
   }
 }
+
 
 .bannerOverlay img {
   width: 40%;
@@ -40,9 +47,9 @@
   position: absolute;
   bottom: 25px;
   right: 16px;
-  transform: rotate(-30deg);
-  animation: float 3s ease-in-out infinite;
+  animation: float 10s ease-in-out infinite;
   transform-origin: center;
+  
 }
 
 .corpo {
@@ -55,9 +62,19 @@
   text-align: start;
   border-radius: 10px;
   color: #000000;
-  font-weight: var(--texto);
   position: relative;
   z-index: 2;
+}
+
+.corpo h1 {
+  font-size: 38px;
+
+}
+
+.corpo h2 {
+  font-size: 22px;
+  font-weight: 100;
+
 }
 
 /* Media Query para dispositivos móveis */
@@ -76,14 +93,15 @@
 
   .corpo {
     margin: 4em auto; /* Ajusta a margem para ficar mais equilibrado em telas pequenas */
-    text-align: center; /* Centraliza o texto no mobile */
+    margin-left: 1em;
+    text-align: start; /* Centraliza o texto no mobile */
   }
 
   .corpo h1 {
-    font-size: 24px; /* Ajusta o tamanho da fonte */
+    font-size: 20px; /* Ajusta o tamanho da fonte */
   }
 
   .corpo h2 {
-    font-size: 18px; /* Ajusta o tamanho da fonte */
+    font-size: 14px; /* Ajusta o tamanho da fonte */
   }
 }
