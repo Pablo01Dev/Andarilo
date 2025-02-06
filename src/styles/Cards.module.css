@@ -19,7 +19,7 @@
 .portfolio {
     width: 20.5em;
     height: 35em;
-    margin: 1em auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;

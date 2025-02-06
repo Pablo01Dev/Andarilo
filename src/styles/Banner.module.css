@@ -4,12 +4,51 @@
   flex-direction: column;
   width: 70%; 
   margin: 0 auto; 
-  background-image: url('../assets/images/banner-background.jpg');
-  background-size: cover;
-  background-position: center;
-  min-height: 600px; /* Defina uma altura mínima */
+  background-color: rgb(255, 204, 0); /* Fundo amarelo */
+
+  min-height: 500px; /* Defina uma altura mínima */
   border-radius: 10px;
+  position: relative; /* Para permitir que a sobreposição fique no topo */
+  overflow: hidden; /* Evita que a imagem ultrapasse as bordas arredondadas */
 }
+
+.bannerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0) rotate(-30deg);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-10px) rotate(-25deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(-30deg);
+  }
+}
+
+
+.bannerOverlay img {
+  width: 40%;
+  height: auto;
+  position: absolute;
+  bottom: 25px;
+  right: 16px;
+  transform: rotate(-30deg);
+  animation: float 3s ease-in-out infinite;
+  transform-origin: center; /* Define o centro da imagem como ponto de rotação */
+}
+
+
+
 
 .corpo {
   margin: 0em auto;
@@ -22,12 +61,6 @@
   border-radius: 10px;
   color: #000000;
   font-weight: var(--texto);
-}
-
-.corpo h1 {
-  font-size: 30px;
-}
-
-.corpo h2 {
-  font-size: 20px;
+  position: relative; /* Mantém o texto acima da sobreposição */
+  z-index: 2;
 }
