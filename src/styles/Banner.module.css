@@ -4,9 +4,9 @@
   flex-direction: column;
   width: 70%; 
   margin: 0 auto; 
-  background-color: rgb(255, 204, 0); /* Fundo amarelo */
   min-height: 500px; 
   border-radius: 10px;
+  background-color: rgb(237, 174, 15);
   position: relative;
   overflow: hidden;
 }
@@ -86,22 +86,27 @@
   }
 
   .bannerOverlay img {
-    width: 60%; /* Aumenta o tamanho da imagem no mobile */
-    bottom: 15px; /* Ajusta a posição vertical */
-    right: 10px; /* Ajusta a posição horizontal */
+    width: 70%; /* Aumenta o tamanho da imagem no mobile */
+    bottom: 75px; /* Ajusta a posição vertical */
+    right: 46px; /* Ajusta a posição horizontal */
+    margin-bottom: 1em;
   }
 
   .corpo {
-    margin: 4em auto; /* Ajusta a margem para ficar mais equilibrado em telas pequenas */
-    margin-left: 1em;
+    margin: 0 auto; /* Ajusta a margem para ficar mais equilibrado em telas pequenas */
+    margin-left: 2em;
+    margin-right: 1em;
     text-align: start; /* Centraliza o texto no mobile */
   }
 
   .corpo h1 {
     font-size: 20px; /* Ajusta o tamanho da fonte */
+    margin-bottom: 12em;
   }
 
   .corpo h2 {
     font-size: 14px; /* Ajusta o tamanho da fonte */
   }
+
+
 }
