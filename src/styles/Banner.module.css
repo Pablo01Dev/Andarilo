@@ -6,7 +6,7 @@
   margin: 0 auto; 
   min-height: 500px; 
   border-radius: 10px;
-  background-color: rgb(237, 174, 15);
+  background-color: rgb(237, 167, 15);
   position: relative;
   overflow: hidden;
 }
@@ -105,7 +105,7 @@
   }
 
   .corpo h2 {
-    font-size: 14px; /* Ajusta o tamanho da fonte */
+    font-size: 16px; /* Ajusta o tamanho da fonte */
   }
 
 
