@@ -2,9 +2,9 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 70%; 
-  margin: 0 auto; 
-  min-height: 500px; 
+  width: 69em; /* Largura fixa */
+  height: 30em; /* Altura fixa */
+  margin: 0 auto;
   border-radius: 10px;
   background-color: rgb(237, 167, 15);
   position: relative;
@@ -20,6 +20,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.bannerOverlay img {
+  width: 38%;
+  height: auto;
+  position: absolute;
+  bottom: 25px;
+  right: 16px;
+  animation: float 10s ease-in-out infinite;
+  transform-origin: center;
 }
 
 @keyframes float {
@@ -40,73 +50,38 @@
   }
 }
 
-
-.bannerOverlay img {
-  width: 40%;
-  height: auto;
-  position: absolute;
-  bottom: 25px;
-  right: 16px;
-  animation: float 10s ease-in-out infinite;
-  transform-origin: center;
-  
-}
-
 .corpo {
-  margin: 0em auto;
+  margin: 4em auto;
   padding: 2em 0 1em 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 6em 30em 0 5em; 
   text-align: start;
   border-radius: 10px;
   color: #000000;
   position: relative;
   z-index: 2;
+  width: 80%;
 }
 
 .corpo h1 {
   font-size: 38px;
-
 }
 
 .corpo h2 {
   font-size: 22px;
   font-weight: 100;
-
 }
 
-/* Media Query para dispositivos móveis */
+/* Removendo responsividade indesejada */
 @media (max-width: 768px) {
   .bannerContainer {
-    width: 90%; /* Aumenta a largura para se ajustar melhor a telas pequenas */
-    margin: 0 auto;
-    min-height: 400px; /* Ajuste a altura para se adequar ao layout */
-  }
-
-  .bannerOverlay img {
-    width: 70%; /* Aumenta o tamanho da imagem no mobile */
-    bottom: 75px; /* Ajusta a posição vertical */
-    right: 46px; /* Ajusta a posição horizontal */
-    margin-bottom: 1em;
+    width: 800px; /* Mantém o tamanho fixo */
+    height: 500px;
   }
 
   .corpo {
-    margin: 0 auto; /* Ajusta a margem para ficar mais equilibrado em telas pequenas */
-    margin-left: 2em;
-    margin-right: 1em;
-    text-align: start; /* Centraliza o texto no mobile */
+    margin: 0 auto;
+    text-align: start;
   }
-
-  .corpo h1 {
-    font-size: 20px; /* Ajusta o tamanho da fonte */
-    margin-bottom: 12em;
-  }
-
-  .corpo h2 {
-    font-size: 16px; /* Ajusta o tamanho da fonte */
-  }
-
-
 }

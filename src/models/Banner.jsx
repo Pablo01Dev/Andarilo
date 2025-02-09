@@ -17,7 +17,7 @@ function Banner() {
       <div ref={ref} className={`${styles.corpo} ${inView ? styles.visible : ''}`}>
         <h1>O Design comunica quando <br /> palavras não podem ser ditas.</h1>
         <h2>
-          As marcas que mais crescem investem em design, priorizando uma identidade visual forte e marcante.
+          As marcas que mais crescem investem em design,<br/>priorizando uma identidade visual forte e marcante.
         </h2>
       </div>
     </div>
