@@ -2,8 +2,8 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 69em; /* Largura fixa */
-  height: 30em; /* Altura fixa */
+  width: 69em; /* Mantém tamanho fixo no desktop */
+  height: 30em;
   margin: 0 auto;
   border-radius: 10px;
   background-color: rgb(237, 167, 15);
@@ -73,15 +73,36 @@
   font-weight: 100;
 }
 
-/* Removendo responsividade indesejada */
-@media (max-width: 768px) {
+/* Responsividade */
+@media (max-width: 1024px) {
   .bannerContainer {
-    width: 800px; /* Mantém o tamanho fixo */
-    height: 500px;
+    width: 90vw; /* Mantém proporção no mobile */
+    height: 30em;
+    
+    
+  }
+
+
+  .bannerOverlay img {
+    width: 50%; /* Mantém imagem proporcional */
+    bottom: 5em;
+    right: 7em;
+
   }
 
   .corpo {
-    margin: 0 auto;
-    text-align: start;
+    width: 90%;
+    margin: 2em auto;
+    text-align: center;
+    
+  }
+
+  .corpo h1 {
+    font-size: 24px; 
+    margin-bottom: 10em;
+  }
+
+  .corpo h2 {
+    font-size: 18px;
   }
 }
