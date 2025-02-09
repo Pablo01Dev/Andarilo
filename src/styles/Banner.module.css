@@ -2,13 +2,27 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 70%; 
-  margin: 0 auto; 
-  min-height: 500px; 
+  width: 70%;
+  margin: 0 auto;
+  min-height: 500px;
   border-radius: 10px;
-  background-color: rgb(237, 167, 15);
   position: relative;
   overflow: hidden;
+  background: linear-gradient(-45deg, rgb(204, 0, 0), rgb(151, 46, 46), rgb(139, 0, 0), rgb(231, 95, 95));
+  background-size: 400% 400%;
+  animation: animateGradient 10s infinite alternate ease-in-out;
+}
+
+@keyframes animateGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .bannerOverlay {
@@ -42,13 +56,15 @@
   margin: 6em 30em 0 5em; 
   text-align: start;
   border-radius: 10px;
-  color: #000000;
+  color: #ffffff;
   position: relative;
   z-index: 2;
 }
 
 .corpo h1 {
   font-size: 2.5em;
+  font-weight: 400;
+
 
 }
 
@@ -101,7 +117,7 @@
 
   .corpo h1 {
     font-size: 20px; /* Ajusta o tamanho da fonte */
-    margin-bottom: 12em;
+    margin-bottom: 13em;
   }
 
   .corpo h2 {
