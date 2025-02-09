@@ -8,7 +8,7 @@
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(-45deg, rgb(204, 0, 0), rgb(151, 46, 46), rgb(139, 0, 0), rgb(231, 95, 95));
+  background: linear-gradient(-45deg, rgb(30, 165, 255), rgb(21, 145, 216), rgb(15, 139, 255), rgb(17, 188, 255));
   background-size: 400% 400%;
   animation: animateGradient 10s infinite alternate ease-in-out;
 }
@@ -56,14 +56,14 @@
   margin: 6em 30em 0 5em; 
   text-align: start;
   border-radius: 10px;
-  color: #ffffff;
+  color: #030303;
   position: relative;
   z-index: 2;
 }
 
 .corpo h1 {
   font-size: 2.5em;
-  font-weight: 400;
+  font-weight: 600;
 
 
 }
