@@ -1,3 +1,4 @@
+/* Estilos principais */
 .bannerContainer {
   text-align: center;
   display: flex;
@@ -8,21 +9,8 @@
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(-45deg, rgb(69, 187, 255), rgb(27, 171, 255), rgb(15, 139, 255), rgb(17, 188, 255));
   background-size: 400% 400%;
   animation: animateGradient 10s infinite alternate ease-in-out;
-}
-
-@keyframes animateGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 .bannerOverlay {
@@ -34,9 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: end;
-
 }
-
 
 .bannerOverlay img {
   width: 25em;
@@ -44,16 +30,17 @@
   animation: float 10s ease-in-out infinite;
   transform-origin: center;
   margin-right: 2em;
-  
+  margin-top: 7em;
 }
 
+/* Corpo do banner */
 .corpo {
   margin: 0em auto;
-  padding: 2em 0 1em 0;
+  padding: 10em 10em 1em 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 6em 30em 0 5em; 
+  margin: 0em 30em 0 5em;
   text-align: start;
   border-radius: 10px;
   color: #030303;
@@ -61,20 +48,38 @@
   z-index: 2;
 }
 
+/* Estilo para o título */
 .corpo h1 {
   font-size: 2.7em;
   font-weight: 600;
-
-
+  line-height: 1.5;
+  display: inline-block;
 }
 
+.corpo h1 span {
+  display: inline-block;
+}
+
+/* Animação do h2 (fade-in com atraso) */
 .corpo h2 {
   font-size: 1.5em;
-  font-weight: 100;
-
+  color: #333;
+  margin-top: 1em;
+  opacity: 0; /* Inicialmente invisível */
+  animation: fadeIn 2s ease-out 2s forwards; /* Animação de fade com atraso */
 }
 
+/* Animação do texto do h2 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
+/* Animação da lata */
 @keyframes float {
   0% {
     transform: translateY(0) translateX(0);
@@ -93,37 +98,30 @@
   }
 }
 
-
+/* Ajustes para telas menores */
 @media (max-width: 768px) {
   .bannerContainer {
-    width: 90%; /* Aumenta a largura para se ajustar melhor a telas pequenas */
+    width: 90%; /* Ajusta a largura para telas pequenas */
     margin: 0 auto;
-    min-height: 400px; /* Ajuste a altura para se adequar ao layout */
+    min-height: 400px; /* Ajusta a altura para telas pequenas */
   }
 
   .bannerOverlay img {
-    width: 16em; /* Aumenta o tamanho da imagem no mobile */
-    bottom: 3em; /* Ajusta a posição vertical */
-    right: 46px; /* Ajusta a posição horizontal */
+    width: 16em; /* Ajusta o tamanho da imagem no mobile */
     margin-bottom: 1em;
     margin-top: 1em;
   }
 
   .corpo {
-    margin: 0 auto; /* Ajusta a margem para ficar mais equilibrado em telas pequenas */
-    margin-left: 2em;
-    margin-right: 1em;
-    text-align: start; /* Centraliza o texto no mobile */
+    margin: 0 auto;
+    text-align: start;
   }
 
   .corpo h1 {
-    font-size: 20px; /* Ajusta o tamanho da fonte */
-    margin-bottom: 13em;
+    font-size: 20px; /* Ajuste do tamanho da fonte no mobile */
   }
 
   .corpo h2 {
-    font-size: 16px; /* Ajusta o tamanho da fonte */
+    font-size: 16px; /* Ajuste do tamanho da fonte no mobile */
   }
-
-
 }
