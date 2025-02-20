@@ -11,7 +11,6 @@ function Home() {
   return (
     <div>
       <Header />
-      <Banner />
       <Element name="portfolio" className="element">
         <Cards />
       </Element>
