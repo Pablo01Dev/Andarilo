@@ -2,20 +2,20 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import styles from '../styles/Header.module.css';
 import siteLogo from '../assets/images/animation.gif';
-import lineAnimate from '../assets/images/floor.gif';
+import lineAnimate from '../assets/images/floor.svg';
 
 function Header() {
-    console.log('Header renderizado');
     return (
         <div className={styles.container}>
             <div className={styles.contentWrapper}>
                 <div className={styles.imageContainer}>
-                    <img src={siteLogo} alt="andarilo" />
+                    <img src={siteLogo} alt="Andarilo logo animado" />
                 </div>
 
                 <div className={styles.lineAnimate}>
-                    <img src={lineAnimate} alt="linha animada" />
+                  <img src={lineAnimate} alt="linha animada" />
                 </div>
+
 
                 <div className={styles.textContainer}>
                     <header>
@@ -26,6 +26,7 @@ function Header() {
                     </header>
                 </div>
             </div>
+
             <div className={styles.navContainer}>
                 <nav>
                     <Link to="portfolio" spy={true} smooth={true} offset={-80} duration={500}>
