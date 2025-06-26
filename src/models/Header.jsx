@@ -12,10 +12,7 @@ function Header() {
                     <img src={siteLogo} alt="Andarilo logo animado" />
                 </div>
 
-                <div className={styles.lineAnimate}>
-                  <img src={lineAnimate} alt="linha animada" />
-                </div>
-
+                <div className={styles.lineAnimate}></div>
 
                 <div className={styles.textContainer}>
                     <header>
