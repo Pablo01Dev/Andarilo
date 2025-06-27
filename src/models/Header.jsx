@@ -7,14 +7,7 @@ import lineAnimate from '../assets/images/floor.svg';
 function Header() {
     return (
         <div className={styles.container}>
-            <div className={styles.contentWrapper}>
-                <div className={styles.imageContainer}>
-                    <img src={siteLogo} alt="Andarilo logo animado" />
-                </div>
-
-                <div className={styles.lineAnimate}></div>
-
-                <div className={styles.textContainer}>
+            <div className={styles.textContainer}>
                     <header>
                         <div className={styles.fontLogo}>
                             <h1>Andarilo</h1>
@@ -22,6 +15,14 @@ function Header() {
                         </div>
                     </header>
                 </div>
+            <div className={styles.contentWrapper}>
+
+                <div className={styles.imageContainer}>
+                    <img src={siteLogo} alt="Andarilo logo animado" />
+                </div>
+
+                <div className={styles.lineAnimate}></div>
+
             </div>
 
             <div className={styles.navContainer}>
