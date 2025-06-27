@@ -72,12 +72,12 @@
   height: 90px; /* altura fixa do SVG no desktop */
   background-repeat: repeat-x;
   background-size: 30em auto;
-  animation: parallaxMove 14s linear infinite;
+  animation: parallaxMove 25s linear infinite;
   opacity: 0.9;
   image-rendering: auto;
   -webkit-backface-visibility: hidden;
   will-change: transform;
-  transform: translateY(40px); /* desloca o floor para baixo */
+  transform: translateY(80px); /* desloca o floor para baixo */
 }
 
 
@@ -170,7 +170,7 @@ nav button {
     height: 100px; /* altura do SVG no mobile */
     transform: translateY(40px);
     background-size: 25em auto;
-      animation: parallaxMove 10s linear infinite;
+      animation: parallaxMove 7s linear infinite;
   }
 }
 
