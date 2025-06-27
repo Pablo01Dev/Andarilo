@@ -8,20 +8,24 @@ function Header() {
     return (
         <div className={styles.container}>
             <div className={styles.textContainer}>
-                    <header>
-                        <div className={styles.fontLogo}>
-                            <h1>Andarilo</h1>
-                            <h2>studio</h2>
-                        </div>
-                    </header>
-                </div>
+                <header>
+                    <div className={styles.fontLogo}>
+                        <h1>Andarilo</h1>
+                        <h2>studio</h2>
+                    </div>
+                </header>
+            </div>
             <div className={styles.contentWrapper}>
 
                 <div className={styles.imageContainer}>
                     <img src={siteLogo} alt="Andarilo logo animado" />
                 </div>
 
-                <div className={styles.lineAnimate}></div>
+                <div className={styles.parallaxFloor}>
+                    <div className={styles.floor}></div>
+                    <div className={styles.floor}></div>
+                </div>
+
 
             </div>
 

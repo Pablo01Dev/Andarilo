@@ -1,3 +1,4 @@
+/* Container base */
 .container {
   background-color: var(--fundo-claro);
   justify-content: center;
@@ -16,14 +17,13 @@
   justify-content: center;
 }
 
+/* Logo */
 .fontLogo h1 {
   text-align: center;
   font-family: Kanit, sans-serif;
   font-weight: 500;
   font-size: 4em;
-  padding: 0;
   margin: 0;
-
   animation: fade-in 1.5s;
 }
 
@@ -32,22 +32,11 @@
   font-family: Kanit, sans-serif;
   font-weight: 500;
   font-size: 2em;
-  margin: 0;
-  margin-top: -.5em;
+  margin: -.5em 0 0 0;
   animation: fade-in 1.5s;
 }
 
-@keyframes moveFloor {
-  from {
-    background-position-x: 0;
-  }
-
-  to {
-    background-position-x: -512px;
-    /* ajuste conforme a largura da imagem do chão */
-  }
-}
-
+/* Animações */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -58,37 +47,55 @@
   }
 }
 
+@keyframes parallaxMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Parallax Floor */
+.parallaxFloor {
+  height: 130px; /* 90 + 40 */
+  overflow: hidden;
+  margin-top: -6em;
+  position: relative;
+}
+
+
+.floor {
+  position: absolute;
+  bottom: 0;
+  top: auto; /* remova top */
+  width: 200%;
+  height: 100%;
+  background-image: url('../assets/images/floor.svg');
+  background-repeat: repeat-x;
+  background-size: 30em auto;
+  animation: parallaxMove 18s linear infinite;
+  opacity: 0.9;
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
+  transform: translateY(40px); /* ajusta a descida */
+}
+
+
+/* Imagem animada */
 .imageContainer img {
   max-width: 10em;
   margin: 5em auto -3em auto;
   display: flex;
   position: relative;
-  /* IMPORTANTE */
   z-index: 2;
   opacity: 0;
   animation: fade-in 1.3s ease-in 0.3s forwards;
 }
 
-
-
-.lineAnimate {
-  width: 100%;
-  height: 200px;
-  /* aumenta a altura da linha */
-  background-image: url('../assets/images/floor.svg');
-  background-repeat: repeat-x;
-  background-size: 580px auto;
-  /* aumenta a largura da repetição do SVG */
-  background-position: 0 bottom;
-  animation: moveFloor 7s linear infinite, fade-in 1.3s ease-in 0.5s forwards;
-  opacity: 0;
-  position: relative;
-  z-index: 0;
-  margin-top: -12em;
-  /* faz ela subir mais */
-}
-
-
+/* Header */
 .header {
   display: flex;
   flex-direction: column;
@@ -106,6 +113,7 @@
   margin: 5em 0 1em 0;
 }
 
+/* Navegação */
 nav {
   display: flex;
   justify-content: center;
@@ -117,15 +125,16 @@ nav {
 
 nav button {
   cursor: pointer;
-  margin: 0px 5px;
+  margin: 0 5px;
   font-size: 1em;
   font-weight: 600;
   border: 0;
-  padding: 1em 1em 1em 1em;
+  padding: 1em;
   border-radius: 6px;
   background-color: var(--cinza);
 }
 
+/* Desktop */
 @media (min-width: 1024px) {
   .container {
     margin: 8em auto 4em auto;
@@ -138,32 +147,38 @@ nav button {
     align-items: center;
   }
 
-
   .imageContainer {
     display: flex;
     justify-content: center;
     position: relative;
-    /* IMPORTANTE */
     z-index: 2;
-    /* maior que o da linha */
   }
 
   .navContainer {
     order: 2;
     width: 100%;
     margin: 4em 0;
-
   }
 }
 
+/* Mobile */
 @media (max-width: 800px) {
-  .lineAnimate {
-    margin-top: -15em;
+  @media (max-width: 800px) {
+  .parallaxFloor {
+    height: 140px; /* 100 + 40 */
+  }
+}
+
+
+  .floor {
+    top: auto;
+    bottom: 0;
+    transform: translateY(40px);
+    /* ou o valor que quiser para descer */
   }
 
   nav button {
     font-size: .9em;
-
   }
 
   .fontLogo h1 {
@@ -175,7 +190,4 @@ nav button {
     margin-top: 3em;
   }
 
-  .navContainer {
-    margin-top: 5em;
-  }
 }
