@@ -15,15 +15,12 @@ function QuemSomos() {
                 <h2>Quem sou?</h2>
                 <div className={styles.personContent}>
                     <img src={Image1} alt="pablo-guimarães" />
-                    <p>
-                        O Andarilo é a personificação do espírito criativo e exploratório do estúdio de design, fundado por Pablo Guimarães.<br />
-                        <br/> 
-                        No Andarilo, cada criação é uma jornada única, uma oportunidade de expressar uma visão de forma técnica e artística.<br />
-                        <br/>
-                        Cada projeto é tratado como uma trilha exploratória, onde cada passo é dado com intenção e paixão.<br />
-                        <br/>
-                        Aqui, buscamos transmitir essa jornada não apenas como uma tarefa, mas como uma expressão autêntica de criatividade e inovação.
-                    </p>
+                       <p>
+                        Sou Pablo Guimarães, e o Andarilo é a personificação do meu espírito criativo e explorador.<br /><br/> 
+                        No Andarilo, cada criação é uma jornada única — uma oportunidade de expressar uma visão com técnica e sensibilidade artística.<br /><br/>
+                        Aqui, buscamos transmitir essa jornada não como uma simples tarefa, mas como uma expressão autêntica de criatividade e conversão.
+                        </p>
+
                 </div>
             </div>
         </div>
