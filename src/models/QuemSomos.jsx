@@ -17,7 +17,7 @@ function QuemSomos() {
                     <img src={Image1} alt="pablo-guimarães" />
                        <p>
                         Sou Pablo Guimarães, e o Andarilo é a personificação do meu espírito criativo e explorador.<br /><br/> 
-                        No Andarilo, cada criação é uma jornada única — uma oportunidade de expressar uma visão com técnica e sensibilidade artística.<br /><br/>
+                        No Andarilo, cada criação é uma jornada única, uma oportunidade de expressar uma visão com técnica e artística.<br /><br/>
                         Aqui, buscamos transmitir essa jornada não como uma simples tarefa, mas como uma expressão autêntica de criatividade e conversão.
                         </p>
 
