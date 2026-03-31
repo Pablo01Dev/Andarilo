@@ -5,11 +5,11 @@ import CardProjetos from '../models/Portfolio/CardProjetos';
 import Contact from '../models/Contact';
 import Footer from '../models/Footer';
 import ModalComponent from '../models/Portfolio/ModalComponent';
-import { website } from '../assets/projectData';
+import { paineis } from '../assets/projectData';
 
 import styles from '../styles/IdentidadeVisual.module.css';
 
-function Website() {
+function Publicidade() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [currentImages, setCurrentImages] = useState([]);
   const [currentTitle, setCurrentTitle] = useState("");
@@ -33,16 +33,16 @@ function Website() {
       <SecondHeader />
       <div className={styles.conteinerProjetos}>
         <div className={styles.projetos}>
-          <p>Websites</p>
+          <p>Publicidade</p>
           <div className={styles.cardProjetos}>
-            {website.map(website => (
+            {paineis.map(paineis => (
               <CardProjetos
-                key={website.id}
-                fundo={website.fundo}
-                titulo={website.title}
+                key={paineis.id}
+                fundo={paineis.fundo}
+                titulo={paineis.title}
                 className={styles.cardProjetos}
-                descricao={website.description}
-                onClick={() => openModal(website.images, website.title, website.link, website.description)}
+                descricao={paineis.description}
+                onClick={() => openModal(paineis.images, paineis.title, paineis.link, paineis.description)}
               />
             ))}
           </div>
@@ -64,4 +64,4 @@ function Website() {
   );
 }
 
-export default Website;
+export default Publicidade;

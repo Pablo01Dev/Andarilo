@@ -5,7 +5,7 @@ import CardProjetos from '../models/Portfolio/CardProjetos';
 import Contact from '../models/Contact';
 import Footer from '../models/Footer';
 import ModalComponent from '../models/Portfolio/ModalComponent';
-import { projects } from '../assets/Data/projectData';
+import { branding } from '../assets/projectData';
 
 import styles from '../styles/IdentidadeVisual.module.css';
 
@@ -33,14 +33,14 @@ function IdentidadeVisual() {
         <div className={styles.projetos}>
           <p>Identidade Visual</p>
           <div className={styles.cardProjetos}>
-            {projects.map(project => (
+            {branding.map(branding => (
               <CardProjetos
-                key={project.id}
-                fundo={project.fundo}
-                titulo={project.title}
+                key={branding.id}
+                fundo={branding.fundo}
+                titulo={branding.title}
                 className={styles.cardProjetos}
-                descricao={project.description}
-                onClick={() => openModal(project.images, project.title, project.description)}
+                descricao={branding.description}
+                onClick={() => openModal(branding.images, branding.title, branding.description)}
               />
             ))}
           </div>

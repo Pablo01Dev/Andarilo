@@ -17,7 +17,7 @@ function Cards() {
        <div ref={ref} className={`${styles.cards} ${inView ? styles.visible : ''}`}>
         <Card fundo={Image1} titulo="Identidade Visual" page="/identidade-visual" />
         <Card fundo={Image2} titulo="Website" page="/website" />
-        <Card fundo={Image3} titulo="Outros" page="/outros" />
+        <Card fundo={Image3} titulo="Publicidade" page="/publicidade" />
       </div>
     </div>
   );
