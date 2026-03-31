@@ -1,6 +1,6 @@
 import React from "react";
 import { useInView } from 'react-intersection-observer';
-import Image1 from '../assets/images/pablo-guima.jpg';
+import Image1 from '/images/pablo-guima.jpg';
 import styles from '../styles/QuemSomos.module.css';
 
 function QuemSomos() {

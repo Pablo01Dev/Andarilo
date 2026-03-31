@@ -7,7 +7,7 @@ import Footer from '../models/Footer';
 import ModalComponent from '../models/Portfolio/ModalComponent';
 import { paineis } from '../assets/projectData';
 
-import styles from '../styles/IdentidadeVisual.module.css';
+import styles from '../styles/Publicidade.module.css';
 
 function Publicidade() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -15,12 +15,17 @@ function Publicidade() {
   const [currentTitle, setCurrentTitle] = useState("");
   const [currentLink, setCurrentLink] = useState("");
   const [currentDescription, setCurrentDescription] = useState("");
+  
+  // 1. Criar o estado para o mapa
+  const [currentMapUrl, setCurrentMapUrl] = useState(""); 
 
-  const openModal = (images, title, link, description) => {
+  // 2. Atualizar a função openModal para receber o mapa
+  const openModal = (images, title, link, description, mapUrl) => { 
     setCurrentImages(images);
     setCurrentTitle(title);
     setCurrentLink(link);
     setCurrentDescription(description);
+    setCurrentMapUrl(mapUrl); // Define a URL do mapa
     setModalIsOpen(true);
   };
 
@@ -35,14 +40,20 @@ function Publicidade() {
         <div className={styles.projetos}>
           <p>Publicidade</p>
           <div className={styles.cardProjetos}>
-            {paineis.map(paineis => (
+            {paineis.map(painel => (
               <CardProjetos
-                key={paineis.id}
-                fundo={paineis.fundo}
-                titulo={paineis.title}
+                key={painel.id}
+                fundo={painel.fundo}
+                titulo={painel.title}
                 className={styles.cardProjetos}
-                descricao={paineis.description}
-                onClick={() => openModal(paineis.images, paineis.title, paineis.link, paineis.description)}
+                descricao={painel.description}
+                onClick={() => openModal(
+                  painel.images, 
+                  painel.title, 
+                  painel.link, 
+                  painel.description, 
+                  painel.mapUrl
+                )}
               />
             ))}
           </div>
@@ -59,6 +70,7 @@ function Publicidade() {
         link={currentLink}
         title={currentTitle}
         description={currentDescription}
+        mapUrl={currentMapUrl}
       />
     </div>
   );

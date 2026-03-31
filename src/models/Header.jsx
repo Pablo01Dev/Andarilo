@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import styles from '../styles/Header.module.css';
-import siteLogo from '../assets/images/animation.gif';
-import lineAnimate from '../assets/images/floor.svg';
+import siteLogo from '/images/animation.gif';
+import lineAnimate from '/images/floor.svg';
 
 function Header() {
   return (

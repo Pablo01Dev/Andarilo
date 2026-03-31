@@ -1,9 +1,9 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import Card from './Card';
-import Image1 from '../assets/images/portfolio/image-nali-1.jpg';
-import Image2 from '../assets/images/portfolio/image-nali-2.jpg';
-import Image3 from '../assets/images/portfolio/image-nali-3.jpg';
+import Image1 from '/images/portfolio/image-nali-1.jpg';
+import Image2 from '/images/portfolio/image-nali-2.jpg';
+import Image3 from '/images/paineis/outdoor.webp';
 import styles from '../styles/Cards.module.css';
 
 function Cards() {
