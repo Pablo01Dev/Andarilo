@@ -7,7 +7,7 @@
 .corpo {
     width: 20.5em;
     margin: 1.5em auto;
-    
+
     padding: 1em 0 1em 0;
     display: flex;
     flex-direction: column;
@@ -65,16 +65,9 @@
 }
 
 @media (min-width: 1024px) {
-    .Fundo {
-        height: 35em;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        margin: 2em auto;
-    }
 
     .corpo {
-        padding: 4em;;
+        padding: 4em 5em 2em;
         flex-direction: column;
         width: 70%;
         margin-top: 1.5em;
@@ -98,9 +91,9 @@
         justify-content: center;
         align-items: center;
     }
-    
+
     .personContent img {
-        width: 40%;
+        width: 38%;
         /* AUMENTAMOS AQUI DE 25% PARA 40% (ou até 45% se quiser maior ainda) */
         height: auto;
         border-radius: 10px;
