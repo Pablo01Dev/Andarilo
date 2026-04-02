@@ -9,10 +9,11 @@
     background-color: var(--fundo-claro);
     align-items: center;
     overflow-x: unset;
+    box-sizing: border-box;
 
     --cinza: #dbdbdb;
-    --texto:  font-weight: 300;
-    --titulo:  font-weight: 500;
+    --texto: font-weight: 300;
+    --titulo: font-weight: 500;
 
     --cor-fundo: #212121;
     --fundo-claro: #fcfcff;

@@ -1,4 +1,3 @@
-
 .fundo {
     text-align: center;
     display: flex;
@@ -7,15 +6,16 @@
 
 .corpo {
     width: 20.5em;
-    height: 40em;
-    margin: 0em auto;
-    padding: 2em 0 1em 0;
+    margin: 1.5em auto;
+    
+    padding: 1em 0 1em 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     border-radius: 10px;
+    box-sizing: border-box;
     font-size: 16px;
     color: #fff;
     background-color: #212121;
@@ -38,16 +38,21 @@
 }
 
 .personContent {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    /* MUDAMOS AQUI DE 'row' PARA 'column' */
     align-items: center;
 }
 
 .personContent img {
-    width: 70%;
+    width: 90%;
+    /* A IMAGEM VAI OCUPAR QUASE TODA A LARGURA DO CARD NO CELULAR */
     height: auto;
     max-height: 100%;
     border-radius: 10px;
+    margin-bottom: 1.5em;
+    /* DÁ UM ESPAÇO ENTRE A IMAGEM E O TEXTO */
 }
 
 .personContent p {
@@ -55,13 +60,13 @@
     display: flex;
     justify-content: center;
     text-align: start;
-    margin: 2em 2.5em 5em 2.5em;
     font-size: 15px;
+    padding: 0 1.5em;
 }
 
 @media (min-width: 1024px) {
     .Fundo {
-        height: 35em;   
+        height: 35em;
         align-items: center;
         justify-content: center;
         display: flex;
@@ -69,7 +74,7 @@
     }
 
     .corpo {
-        padding: 4em 0 1em 0;
+        padding: 4em;;
         flex-direction: column;
         width: 70%;
         margin-top: 1.5em;
@@ -93,20 +98,20 @@
         justify-content: center;
         align-items: center;
     }
-
+    
     .personContent img {
-        width: 25%;
+        width: 40%;
+        /* AUMENTAMOS AQUI DE 25% PARA 40% (ou até 45% se quiser maior ainda) */
         height: auto;
         border-radius: 10px;
         max-height: none;
-        margin-left: 2em;
     }
 
     .personContent p {
-        width: 30em;
+        width: 55%;
+        /* AJUSTADO PARA COMPENSAR A IMAGEM MAIOR */
         height: auto;
         text-align: start;
         font-size: 18px;
-        margin: 0 2em;
     }
 }

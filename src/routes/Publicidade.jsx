@@ -11,21 +11,12 @@ import styles from '../styles/Publicidade.module.css';
 
 function Publicidade() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [currentImages, setCurrentImages] = useState([]);
-  const [currentTitle, setCurrentTitle] = useState("");
-  const [currentLink, setCurrentLink] = useState("");
-  const [currentDescription, setCurrentDescription] = useState("");
-  
-  // 1. Criar o estado para o mapa
-  const [currentMapUrl, setCurrentMapUrl] = useState(""); 
 
-  // 2. Atualizar a função openModal para receber o mapa
-  const openModal = (images, title, link, description, mapUrl) => { 
-    setCurrentImages(images);
-    setCurrentTitle(title);
-    setCurrentLink(link);
-    setCurrentDescription(description);
-    setCurrentMapUrl(mapUrl); // Define a URL do mapa
+
+  const [projetoSelecionado, setProjetoSelecionado] = useState(null);
+
+  const openModal = (painel) => {
+    setProjetoSelecionado(painel);
     setModalIsOpen(true);
   };
 
@@ -47,13 +38,7 @@ function Publicidade() {
                 titulo={painel.title}
                 className={styles.cardProjetos}
                 descricao={painel.description}
-                onClick={() => openModal(
-                  painel.images, 
-                  painel.title, 
-                  painel.link, 
-                  painel.description, 
-                  painel.mapUrl
-                )}
+                onClick={() => openModal(painel)}
               />
             ))}
           </div>
@@ -63,15 +48,19 @@ function Publicidade() {
         <Contact />
       </Element>
       <Footer />
-      <ModalComponent
-        isOpen={modalIsOpen}
-        closeModal={closeModal}
-        images={currentImages}
-        link={currentLink}
-        title={currentTitle}
-        description={currentDescription}
-        mapUrl={currentMapUrl}
-      />
+
+      {projetoSelecionado && (
+        <ModalComponent
+          isOpen={modalIsOpen}
+          closeModal={closeModal}
+          images={projetoSelecionado.images}
+          link={projetoSelecionado.link}
+          title={projetoSelecionado.title}
+          description={projetoSelecionado.description}
+          mapUrl={projetoSelecionado.mapUrl}
+          anunciar={projetoSelecionado.anunciar}
+        />
+      )}
     </div>
   );
 }

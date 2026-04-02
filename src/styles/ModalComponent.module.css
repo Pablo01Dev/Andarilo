@@ -14,7 +14,6 @@
   scrollbar-width: thin; 
 }
 
-
 .modalButton {
   position: fixed;
   top: 4.3em; 
@@ -46,31 +45,24 @@
 }
 
 .modalContainer h1 {
+  font-size: 30px;
+  font-weight: 500;
   margin: 2em 0 1em;
 }
 
-.modalContainer p {
-  margin: 2em 10em;
-}
-
-
-
-
+/* Ajustei o parágrafo para não quebrar em telas médias */
 .modalContainer p {
   font-size: 18px;
   font-weight: 300;
+  margin: 2em auto; /* Mudei de '2em 10em' para '2em auto' para evitar esmagar o texto */
+  max-width: 700px; /* Garante que o texto não fique gigante esticado */
+  text-align: center;
 }
-
 
 .modalContainer a {
   font-size: 24px;
   margin-bottom: 2em;
   font-weight: 300;
-}
-
-.modalContainer h1 {
-  font-size: 30px;
-  font-weight: 500;
 }
 
 .imageContainer {
@@ -107,13 +99,38 @@
   border-radius: 10px;
 }
 
+.announceButton {
+  background-color: #ff5a5f;
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 600;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(49, 2, 5, 0.3);
+}
+
+.announceButton:hover {
+  background-color: #e04b4f;
+  box-shadow: 0 6px 16px rgba(255, 90, 95, 0.4);
+  transform: translateY(-2px);
+}
+
+.announceButton:active {
+  transform: translateY(1px);
+}
+/* ------------------------------------------------ */
+
 @media (max-width: 1023px) {
   .modal {
-    position: relative;
-    max-width: 80%;
-    top: 54%;
-    left: 52.2%;
-    transform: translate(-52%, -50%);
+    position: fixed; /* Mantive fixed para evitar comportamentos estranhos em modal */
+    max-width: 90%; /* Aumentei um pouquinho para aproveitar melhor a tela do celular */
+    max-height: 85%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .imageContainer {
