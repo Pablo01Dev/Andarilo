@@ -35,10 +35,10 @@ function Header() {
       <div className={styles.navContainer}>
         <nav>
           <Link to="portfolio" spy={true} smooth={true} offset={-80} duration={500}>
-            <button>Portfólio</button>
+            <button>Serviços</button>
           </Link>
           <Link to="about" spy={true} smooth={true} offset={-80} duration={500}>
-            <button>Quem sou?</button>
+            <button>Quem somos</button>
           </Link>
           <Link to="contact" spy={true} smooth={true} offset={-80} duration={500}>
             <button>Contato</button>

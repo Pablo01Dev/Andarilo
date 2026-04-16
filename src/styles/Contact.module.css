@@ -1,198 +1,198 @@
-.baseContato {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 50vh;
-    margin: 1em;
-
-}
-
-.contatoContainer {
-    justify-content: center;
-    width: 20.5em;
-    height: 30em;
-    margin: 0 auto;
-    padding: 2em 0 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border-radius: var(--border-radius);
-    font-size: var(--tamanho-base);
-    color: var(--cor-texto);
-    background-color: var(--cor-fundo);
-    transform: translateY(4em);
-    opacity: 0;
-    transition: opacity 1.2s, transform 2s;
-
-}
-
-
-.contatoContainer.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.contatoContainer h2 {
-    font-weight: 300;
-    font-size: 1.7em;
-    margin: 1.5em 0 .5em 0;
-}
-
-
-.contactContent,
-.orcamento {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.contactContent {
-    margin: 0em auto;
-    background-color: var(--cor-fund);
-}
-
-.orcamento {
-    background-color: var(--cor-destaque);
-    color: var(--cor-fundo);
-    width: 12em;
-    height: 8em;
-    font-size: 20px;
-    border-radius: var(--border-radius);
-    margin: 1.2em 0 2em;
-}
-
-.orcamento p {
-    margin: 1em 0;
-}
-
-.orcamento button {
-    cursor: pointer;
-    font-size: var(--tamanho-base);
-    background-color: var(--cor-botao);
-    color: var(--cor-fundo);
-    border: 0;
-    font-family: basic;
-    font-weight: 600;
-    padding: 0.5em 0.8em;
-    border-radius: 5px;
-    margin-bottom: 1.2em;
-}
-
-.numero {
-    font-size: 24px;
-    margin: 0;
-}
-
-.email {
-    margin-top: 1em;
-}
-
-.redesSociais {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    width: 12em;
-    height: 8em;
-    font-size: 20px;
-}
-
-.redesSociais button {
-    cursor: pointer;
-    gap: 0em;
-    margin: 0.5em 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1em;
-    color: var(--cor-texto);
-    background-color: transparent;
-    border: 0;
-}
-
-.redesSociais span {
-    font-size: 18px;
-}
-
-.info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (min-width: 1024px) {
-
     .baseContato {
-        margin: 0;
-
-    }
-
-    .redesSociais {
-        width: 1em;
-        height: 2em;
-        margin: 0;
-    }
-
-    .info,
-    .email {
-        margin: 0;
-    }
-
-    .contactContent {
-        gap: 10em;
-        width: 100%;
-        height: auto;
         display: flex;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin: 0 auto;
+        min-height: 50vh;
+        margin: 1em;
+
     }
 
     .contatoContainer {
-        width: 70%;
-        height: 22.5em;
-
-        padding: 2em 0;
-        margin: 1.5em 0 2em;
-
-        display: flex;
         justify-content: center;
+        width: 20.5em;
+        height: 30em;
+        margin: 0 auto;
+        padding: 2em 0 1em;
+        display: flex;
         flex-direction: column;
-
+        align-items: center;
+        text-align: center;
         border-radius: var(--border-radius);
         font-size: var(--tamanho-base);
-        color: #1B1B1B;
-        background-color: var(--cinza);
+        color: var(--cor-texto);
+        background-color: var(--cor-fundo);
+        transform: translateY(4em);
+        opacity: 0;
+        transition: opacity 1.2s, transform 2s;
+
+    }
+
+
+    .contatoContainer.visible {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .contatoContainer h2 {
-        margin: 1.5em 0;
+        font-weight: 300;
+        font-size: 1.7em;
+        margin: 1.5em 0 .5em 0;
+    }
+
+
+    .contactContent,
+    .orcamento {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contactContent {
+        margin: 0em auto;
+        background-color: var(--cor-fund);
     }
 
     .orcamento {
-        background-color: var(--cor-fundo);
-        color: white;
+        background-color: var(--cor-destaque);
+        color: var(--cor-fundo);
+        width: 12em;
+        height: 8em;
+        font-size: 20px;
+        border-radius: var(--border-radius);
+        margin: 1.2em 0 2em;
     }
 
-    .info {
-        gap: .7em;
+    .orcamento p {
+        margin: 1em 0;
+    }
+
+    .orcamento button {
+        cursor: pointer;
+        font-size: var(--tamanho-base);
+        background-color: var(--cor-botao);
         color: var(--cor-fundo);
+        border: 0;
+        font-family: basic;
+        font-weight: 600;
+        padding: 0.5em 0.8em;
+        border-radius: 5px;
+        margin-bottom: 1.2em;
+    }
+
+    .numero {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .email {
+        margin-top: 1em;
+    }
+
+    .redesSociais {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        width: 12em;
+        height: 8em;
+        font-size: 20px;
     }
 
     .redesSociais button {
-        color: var(--cor-fundo);
-    }
-}
-
-@media (max-width: 1023px) {
-    .contatoContainer {
+        cursor: pointer;
+        gap: 0em;
+        margin: 0.5em 0;
+        display: flex;
+        align-items: center;
         justify-content: center;
-        margin: 0;
-        width: 20.5em
+        font-size: 1.1em;
+        color: var(--cor-texto);
+        background-color: transparent;
+        border: 0;
     }
 
-}
+    .redesSociais span {
+        font-size: 18px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+
+        .baseContato {
+            margin: 0;
+
+        }
+
+        .redesSociais {
+            width: 1em;
+            height: 2em;
+            margin: 0;
+        }
+
+        .info,
+        .email {
+            margin: 0;
+        }
+
+        .contactContent {
+            gap: 10em;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .contatoContainer {
+            width: 70%;
+            height: 22.5em;
+
+            padding: 2em 0;
+            margin: 1.5em 0 2em;
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            border-radius: var(--border-radius);
+            font-size: var(--tamanho-base);
+            color: #1B1B1B;
+            background-color: var(--cinza);
+        }
+
+        .contatoContainer h2 {
+            margin: 1.5em 0;
+        }
+
+        .orcamento {
+            background-color: var(--cor-fundo);
+            color: white;
+        }
+
+        .info {
+            gap: .7em;
+            color: var(--cor-fundo);
+        }
+
+        .redesSociais button {
+            color: var(--cor-fundo);
+        }
+    }
+
+    @media (max-width: 1023px) {
+        .contatoContainer {
+            justify-content: center;
+            margin: 0;
+            width: 20.5em
+        }
+
+    }

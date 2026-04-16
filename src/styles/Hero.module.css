@@ -1,0 +1,160 @@
+/* HeroBanner.module.css */
+
+.baseHero {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* === CONTAINER PRINCIPAL (Baseado no seu .corpo) === */
+.heroContainer {
+    width: 20.5em;
+    /* Mantendo a consistência do seu layout mobile */
+    margin: 1.5em auto;
+    padding: 2em 1em;
+    /* Padding levemente maior para não amassar a imagem no mobile */
+    display: flex;
+    flex-direction: column;
+    /* Empilhado no mobile */
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    /* Seguindo o seu padrão */
+    box-sizing: border-box;
+    background-color: #212121;
+    color: #ffffff;
+
+    /* Animação base */
+    transform: translateY(4em);
+    opacity: 0;
+    transition: opacity 1.2s, transform 2s;
+}
+
+.heroContainer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === ÁREA DE TEXTO === */
+.heroTextContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Centralizado no mobile */
+    color: #1B1B1B;
+    box-sizing: border-box;
+}
+
+.heroTitle {
+    font-weight: 700;
+    font-size: 2.2em;
+    /* Ajustado para caber nos 20.5em */
+    margin: 0 0 0.5em 0;
+    line-height: 1.1;
+    color: #FFFFFF;
+}
+
+.heroSubTitle {
+    font-size: 1.1em;
+    margin-bottom: 0.8em;
+    line-height: 1.5;
+        color: #FFFFFF;
+}
+
+.heroReinforcement {
+    font-size: 1em;
+    color: #b7b7b7;
+    margin-bottom: 2em;
+}
+
+/* === BOTÃO CTA === */
+.heroButtonWrapper {
+    text-decoration: none;
+}
+
+.heroButton {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    font-size: 1em;
+    background-color: #FFFFFF;
+    color: #212121;
+    border: 2px solid #1B1B1B;
+    /* Borda para contraste no fundo claro */
+    font-family: inherit;
+    font-weight: 700;
+    padding: 0.8em 1.5em;
+    border-radius: 50px;
+    /* Formato pílula */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.heroButton:hover {
+    background-color: #1B1B1B;
+    color: #FFFFFF;
+    transform: scale(1.05);
+}
+
+/* === ÁREA DE IMAGEM === */
+.heroImageContent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    /* Espaço entre texto e imagem no mobile */
+}
+
+.heroImage {
+    width: 90%;
+    /* Seguindo a lógica do seu .personContent img */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* === DESKTOP (Acima de 1024px) === */
+@media (min-width: 1024px) {
+    .heroContainer {
+        width: 70%;
+        /* Mantendo a consistência do seu layout desktop */
+        margin-top: 1.5em;
+        padding: 4em 5em;
+        /* Seguindo o padding do seu .corpo */
+        flex-direction: row;
+        /* Lado a lado no desktop */
+        justify-content: space-between;
+    }
+
+    .heroTextContent {
+        width: 55%;
+        /* Divide o espaço com a imagem */
+        align-items: flex-start;
+        /* Texto alinhado à esquerda */
+        text-align: left;
+        padding-right: 2em;
+    }
+
+    .heroTitle {
+        font-size: 3.2em;
+        /* Título volta a ficar grande no desktop */
+    }
+
+    .heroSubTitle {
+        font-size: 1.3em;
+    }
+
+    .heroImageContent {
+        width: 40%;
+        /* Divide o espaço com o texto */
+        margin-top: 0;
+        justify-content: flex-end;
+    }
+
+    .heroImage {
+        width: 100%;
+        /* Ocupa todo o espaço da div de 40% */
+    }
+}

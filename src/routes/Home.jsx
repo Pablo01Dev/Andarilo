@@ -5,12 +5,18 @@ import Header from '../models/Header';
 import Footer from '../models/Footer';
 import Contact from '../models/Contact';
 import QuemSomos from '../models/QuemSomos';
+import Hero from '../models/Hero';
 
 
 function Home() {
   return (
     <div>
       <Header />
+
+      <Element name="hero" className="element">
+        <Hero />
+      </Element>
+
       <Element name="portfolio" className="element">
         <Cards />
       </Element>
